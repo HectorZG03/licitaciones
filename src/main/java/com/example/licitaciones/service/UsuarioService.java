@@ -14,8 +14,4 @@ public class UsuarioService {
         this.usuarioRepository =usuarioRepository;
     }
 
-    public boolean login(String nombreusuario, String password){
-        Optional<Usuario> usuarioOpt = usuarioRepository.findByNombreusuario(nombreusuario);
-        return usuarioOpt.map(usuario -> usuario.getPassword().equals(password)).orElse(false);
-    }
 }
